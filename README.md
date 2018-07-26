@@ -16,3 +16,5 @@ oscillator.start(0); <br />
 - We generate Morse Code by toggling between 0 and 1. 
 - I used JS For Loop that automatically converts English text to Morse code (dots and dashes). 
 ### - Then I'm trying to work on converting dots and dashes into sequences of volume changes.
+
+Everybody can visit his gist to learn more: https://gist.github.com/eholk/0115691987090973cefe
