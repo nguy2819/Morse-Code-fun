@@ -1,4 +1,13 @@
 - According to Eric Holk's blog, APIs include parameter automation => allow users to schedule changes in various audio parameters at specific points in time.
+- Web Audio APIs https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
+### A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with GainNode). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination (AudioContext.destination), which sends the sound to the speakers or headphones. (MDN source)
+
+### 1. Create audio context
+### 2. Inside the context, create sources — such as <audio>, oscillator, stream
+### 3. Create effects nodes, such as reverb, biquad filter, panner, compressor
+### 4. Choose final destination of audio, for example your system speakers
+### 5. Connect the sources up to the effects, and the effects to the destination. (MDN source)
+  
 - GainNode: allows us to adjust the volume.
 
 var context = new (window.AudioContext || window.webkitAudioContext()); <br />
