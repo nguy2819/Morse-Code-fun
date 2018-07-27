@@ -2,10 +2,10 @@
 
 - [x] I used JS For Loop that automatically converts English text to Morse code (dots and dashes). 
 - [ ] Also translate Morse code into text.
-- [ ] I'll generate Morse Code by toggling between 0 and 1 into sounds via [OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode) - suggested from [Eric Holk'blog](https://blog.theincredibleholk.org/blog/2014/06/23/generating-morse-code-with-javascript/).
-- [ ] I'm also trying to work on converting dots and dashes into sequences of volume changes. :thumbsup::shipit:
-- [ ] Last but not least, I would like to transfer this program into mobile app (open source) for every users to use it offline.
-- [ ] Finally, I would like to like to build a practice site - where people can practice listening morse code and answer with the Right/Wrong text - send to API and DB - DB will send back the result if the user pass/fail the practices, and vice versa. :astonished:
+- [ ] I'll generate Morse Code by toggling between 0 and 1 into sounds via :loudspeaker: [OscillatorNode](https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode).
+- [ ] I'm also trying to work on converting dots and dashes into sequences of volume changes.:notes::thumbsup::shipit:
+- [ ] Last but not least, I would like to transfer this program into mobile app :iphone:(open source) for every users to use it offline.
+- [ ] Finally, I would like to like to build a practice site :memo:- where people can practice listening :headphones: morse code and answer with the Right/Wrong text - send to API and DB - DB will send back the result if the user pass/fail the practices, and vice versa. :astonished:
 
 ## :eyes:What I've learn: :eyes:
 
@@ -33,5 +33,5 @@ gain.connect(context.destination);
 oscillator.start(0);
 ```
 
-* Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) to learn more 
+* Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) and [his blog](https://blog.theincredibleholk.org/blog/2014/06/23/generating-morse-code-with-javascript/) to learn more
 * I got the available emoji and codes through [this link](https://www.webpagefx.com/tools/emoji-cheat-sheet/):muscle:
