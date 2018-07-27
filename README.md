@@ -31,5 +31,5 @@ gain.connect(context.destination);
 oscillator.start(0);
 ```
 
-Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) to learn more 
-I got the available emoji and codes through [this link](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+* Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) to learn more 
+* I got the available emoji and codes through [this link](https://www.webpagefx.com/tools/emoji-cheat-sheet/):muscle:
