@@ -17,9 +17,8 @@
 > 2. Inside the context, create sources — such as <audio>, oscillator, stream
 > 3. Create effects nodes, such as reverb, biquad filter, panner, compressor
 > 4. Choose final destination of audio, for example your system speakers
-> 5. Connect the sources up to the effects, and the effects to the destination. (MDN source)
+> 5. Connect the sources up to the effects, and the effects to the destination. (MDN source
  
-
 ```
 var context = new (window.AudioContext || window.webkitAudioContext());
 var oscillator = context.createOscillator();
@@ -32,6 +31,24 @@ gain.connect(context.destination);
 
 oscillator.start(0);
 ```
-
+> - [String.prototype.split()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) example from MDN:
+```
+function splitString(stringToSplit, separator) {
+  var arrayOfStrings = stringToSplit.split(separator);
+  }
+var space = ' ';
+var comma = ',';
+```
+String.prototype.split() applies into this program:
+```
+translate(typeMorseCode){
+        var arrayOfStrings = typeMorseCode.split(' '); //"9MorseCode" "7MorseCode"=> the space between 9 and 7 be removed
+        for(let i = 0; i < arrayOfStrings.length; i++){
+            let element = arrayOfStrings[i]; //represents the whole chunk of the character - like ---..
+            let result = this.state.morseToAlpha[element];
+        }
+        return ;
+    }
+```
 * Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) and [his blog](https://blog.theincredibleholk.org/blog/2014/06/23/generating-morse-code-with-javascript/) to learn more
 * I got the available emoji and codes through [this link](https://www.webpagefx.com/tools/emoji-cheat-sheet/):muscle:
