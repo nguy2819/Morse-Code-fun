@@ -1,29 +1,34 @@
-- According to Eric Holk's blog, APIs include parameter automation => allow users to schedule changes in various audio parameters at specific points in time.
-- Web Audio APIs https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API
-### A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with GainNode). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination (AudioContext.destination), which sends the sound to the speakers or headphones. (MDN source)
+## What I achieved in this Morse Code program:
 
-### 1. Create audio context
-### 2. Inside the context, create sources — such as <audio>, oscillator, stream
-### 3. Create effects nodes, such as reverb, biquad filter, panner, compressor
-### 4. Choose final destination of audio, for example your system speakers
-### 5. Connect the sources up to the effects, and the effects to the destination. (MDN source)
-  
-- GainNode: allows us to adjust the volume.
+- [x] I used JS For Loop that automatically converts English text to Morse code (dots and dashes). 
+- [ ] Also translate Morse code into text.
+- [ ] I generate Morse Code by toggling between 0 and 1 into sounds through Eric Holk'blog.
+- [ ] Finally, I'm trying to work on converting dots and dashes into sequences of volume changes. :thumbsup::shipit:
 
-var context = new (window.AudioContext || window.webkitAudioContext()); <br />
-var oscillator = context.createOscillator(); <br />
+## What I've learn: 
 
-var gain = context.createGain(); <br />
+>- According to Eric Holk's blog, APIs include parameter automation => allow users to schedule changes in various audio parameters at specific points in time.
+>- [Web Audio APIs](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+>- [GainNode](https://developer.mozilla.org/en-US/docs/Web/API/GainNode): allows us to adjust the volume.
+>- A common modification is multiplying the samples by a value to make them louder or quieter (as is the case with GainNode). Once the sound has been sufficiently processed for the intended effect, it can be linked to the input of a destination (AudioContext.destination), which sends the sound to the speakers or headphones. (MDN source)
+> 1. Create audio context*
+> 2. Inside the context, create sources — such as <audio>, oscillator, stream
+> 3. Create effects nodes, such as reverb, biquad filter, panner, compressor
+> 4. Choose final destination of audio, for example your system speakers
+> 5. Connect the sources up to the effects, and the effects to the destination. (MDN source)
+ 
 
-oscillator.frequency.value = 750; <br />
+```
+var context = new (window.AudioContext || window.webkitAudioContext());
+var oscillator = context.createOscillator();
 
-oscillator.connect(context); <br />
-gain.connect(context.destination); <br />
+var gain = context.createGain();
 
-oscillator.start(0); <br />
+oscillator.frequency.value = 750;
+oscillator.connect(context);
+gain.connect(context.destination);
 
-- We generate Morse Code by toggling between 0 and 1. 
-- I used JS For Loop that automatically converts English text to Morse code (dots and dashes). 
-### - Then I'm trying to work on converting dots and dashes into sequences of volume changes.
+oscillator.start(0);
+```
 
-Everybody can visit his gist to learn more: https://gist.github.com/eholk/0115691987090973cefe
+Everybody can visit [Eric Holk's gist](https://gist.github.com/eholk/0115691987090973cefe) to learn more 
